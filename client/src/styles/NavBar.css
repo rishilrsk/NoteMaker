@@ -1,0 +1,80 @@
+/* src/styles/NavBar.css */
+
+/* 1. The Navbar itself (matches MDB style: solid bg, shadow) */
+.app-navbar {
+  /* Use our dark card color, not pure black */
+  background-color: var(--app-card); 
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  /* A subtle shadow like the screenshot */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  border-bottom: 1px solid var(--app-border);
+}
+
+/* 2. Style the Logo */
+.app-navbar .navbar-brand {
+  color: var(--app-text);
+  transition: var(--app-transition);
+}
+.app-navbar .navbar-brand:hover {
+  color: var(--app-accent);
+}
+
+/* 3. Style the icon + text links (like MDB's "Post", "Alerts") */
+.nav-link-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between icon and text */
+  color: var(--app-text-muted);
+  font-weight: 500;
+  transition: var(--app-transition);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--app-border-radius);
+}
+
+.nav-link-with-icon:hover {
+  color: var(--app-text);
+  background-color: rgba(255, 255, 255, 0.05); /* Subtle hover */
+}
+
+/* 4. Style the logged-in user dropdown */
+/* src/styles/NavBar.css */
+
+/* 1. The Navbar itself (matches MDB style: solid bg, shadow) */
+.app-navbar {
+  background-color: var(--app-card); 
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  border-bottom: 1px solid var(--app-border);
+}
+
+/* 2. Style the Logo */
+.app-navbar .navbar-brand {
+  color: var(--app-text);
+  transition: var(--app-transition);
+}
+.app-navbar .navbar-brand:hover {
+  color: var(--app-accent);
+}
+
+/* 3. '.nav-link-with-icon' style block has been REMOVED */
+
+/* 4. Style the logged-in user dropdown */
+.app-navbar .dropdown-toggle {
+  color: var(--app-text);
+  font-weight: 500;
+}
+.app-navbar .dropdown-menu {
+  background-color: rgb(red, green, blue);
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-border-radius);
+}
+.app-navbar .dropdown-item {
+  color: var(--app-text);
+  transition: var(--app-transition);
+}
+.app-navbar .dropdown-item:hover {
+  background-color: rgba(75, 74, 74, 0.05);
+  color: #3f3b3b;
+}

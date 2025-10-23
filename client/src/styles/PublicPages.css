@@ -1,0 +1,43 @@
+/* src/styles/PublicPages.css */
+
+/* This wrapper class will be applied to your Landing, Login, 
+  and Signup pages to force a light theme.
+*/
+.public-page-wrapper {
+  /* 1. Set the light gray background */
+  background-color: #f8f9fa;
+  color: #343a40; /* Dark text */
+  
+  /* 2. Override the main layout's padding to fill the screen */
+  margin: -1.5rem calc(-50vw + 50%);
+  padding: 4rem 1.5rem;
+  min-height: calc(100vh - 80px); /* Fill height minus navbar */
+  box-sizing: border-box;
+}
+
+/* 3. Override global dark styles for this page */
+.public-page-wrapper h1,
+.public-page-wrapper h2,
+.public-page-wrapper h3,
+.public-page-wrapper h4,
+.public-page-wrapper h5,
+.public-page-wrapper p {
+  color: #343a40;
+}
+
+.public-page-wrapper .text-muted {
+  color: #6c757d !important;
+}
+
+/* 4. Style the white cards for this page */
+.public-page-wrapper .card {
+  background-color: #ffffff !important;
+  border: 1px solid #e0e0e0 !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+  border-radius: 0.75rem !important;
+  color: #343a40 !important;
+}
+
+.public-page-wrapper .card .card-text {
+  color: #6c757d;
+}

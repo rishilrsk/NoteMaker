@@ -1,0 +1,131 @@
+/* src/styles/App.css */
+
+/* 1. DEFINE OUR NEW LIGHT COLOR PALETTE (based on your screenshots) */
+:root {
+  /* Shades of Gray & White */
+  --app-bg: #f8f9fa; /* Very light gray background for the overall app */
+  --app-card: #ffffff; /* White background for cards (like your login form) */
+  --app-input: #ffffff; /* White background for inputs (matching card) */
+  --app-border: #e0e0e0; /* Subtle light gray border */
+  
+  /* Text */
+  --app-text: #343a40; /* Dark gray for primary text */
+  --app-text-muted: #6c757d; /* Muted gray for secondary text */
+  
+  /* Accent Color (Keep your blue) */
+  --app-accent: #0d6efd; /* The bright blue for buttons/links */
+
+  /* Global style variables */
+  --app-border-radius: 0.75rem; /* Slightly more rounded corners for modern look */
+  --app-transition: all 0.2s ease-in-out;
+  --app-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Softer shadow for light UI */
+}
+
+/* 2. APPLY THE GLOBAL STYLES */
+body {
+  background-color: var(--app-bg) !important;
+  color: var(--app-text) !important;
+  min-height: 100vh;
+}
+
+/* 3. MAKE ALL CARDS USE THE NEW CARD COLOR AND SHADOW */
+.card {
+  background-color: var(--app-card) !important;
+  border: 1px solid var(--app-border) !important;
+  border-radius: var(--app-border-radius) !important;
+  color: var(--app-text) !important;
+  box-shadow: var(--app-shadow) !important; /* Apply new shadow */
+}
+
+/* 4. MAKE ALL LINKS USE THE ACCENT COLOR */
+a,
+.btn-link {
+  color: var(--app-accent);
+  transition: var(--app-transition);
+  text-decoration: none; /* No underline by default */
+}
+a:hover,
+.btn-link:hover {
+  color: #4090ff; /* A lighter blue for hover */
+  text-decoration: underline; /* Underline on hover for clarity */
+}
+
+/* 5. STYLE HEADINGS AND MODALS */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--app-text);
+  font-weight: 700; /* Bolder headings as in screenshot */
+}
+.text-muted {
+  color: var(--app-text-muted) !important;
+}
+.modal-content {
+  background-color: var(--app-card);
+  border: 1px solid var(--app-border);
+  box-shadow: var(--app-shadow);
+  border-radius: var(--app-border-radius);
+}
+.modal-header { border-bottom: 1px solid var(--app-border); }
+.modal-footer { border-top: 1px solid var(--app-border); }
+.btn-close { 
+  filter: none; 
+}
+
+/* 6. STYLE FORM BUTTONS */
+.btn-primary {
+  background-color: var(--app-accent);
+  border-color: var(--app-accent);
+  border-radius: var(--app-border-radius);
+  transition: var(--app-transition);
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+}
+.btn-primary:hover {
+  filter: brightness(1.15);
+  background-color: var(--app-accent);
+  border-color: var(--app-accent);
+}
+
+.btn-outline-light {
+  color: var(--app-accent);
+  border-color: var(--app-accent);
+  background-color: transparent;
+  border-radius: var(--app-border-radius);
+  transition: var(--app-transition);
+}
+.btn-outline-light:hover {
+  color: #fff;
+  background-color: var(--app-accent);
+  border-color: var(--app-accent);
+}
+
+/* ==============================================
+  --- STYLES FOR DROPDOWN MENUS ---
+  THIS IS THE FIX for your dropdown bug
+  ==============================================
+*/
+.dropdown-menu {
+  background-color: var(--app-card) !important;  /* Makes it white */
+  border: 1px solid var(--app-border) !important; /* Adds a subtle border */
+  box-shadow: var(--app-shadow) !important;     /* Adds the shadow */
+  border-radius: var(--app-border-radius) !important; /* Matches your card's rounded corners */
+  padding: 0.5rem 0 !important; /* Adds some vertical padding */
+  z-index: 1021; /* Ensures it's on top of other elements */
+}
+
+.dropdown-item {
+  color: var(--app-text) !important;
+  transition: var(--app-transition) !important;
+  padding: 0.5rem 1rem !important; /* Makes items a bit taller */
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: var(--app-accent) !important; /* Blue on hover */
+  color: #fff !important;
+}
+
+.dropdown-divider {
+  border-top: 1px solid var(--app-border) !important;
+}
+/* --- END OF DROPDOWN STYLES --- */

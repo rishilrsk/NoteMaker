@@ -1,0 +1,102 @@
+/* src/styles/Editor.css */
+
+/* Styles for the Tiptap editor component (Light Theme) */
+
+/* Editor Content Area */
+.tiptap-editor {
+  background-color: var(--app-input); /* White background */
+  color: var(--app-text); /* Dark text */
+  border: 1px solid var(--app-border); /* Subtle light border */
+  border-radius: var(--app-border-radius); /* Applied here for main editor area */
+  min-height: 250px;
+  padding: 0.75rem 1rem;
+  transition: var(--app-transition);
+  
+  /* Ensure padding and border are included in element's total width and height */
+  box-sizing: border-box;
+}
+
+.tiptap-editor:focus-within {
+  outline: none;
+  border-color: var(--app-accent); /* Blue border on focus */
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); /* Blue glow */
+}
+
+/* Editor Toolbar (MenuBar) */
+.editor-toolbar {
+  background: #f1f3f5; /* Light gray background */
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-border-radius); /* Apply border-radius here */
+  display: flex; /* Use flex to align buttons */
+  flex-wrap: wrap; /* Allow buttons to wrap */
+  align-items: center;
+}
+
+.editor-toolbar .btn {
+  /* Inherit border-radius from buttonStyle in JSX */
+  margin-bottom: 0.25rem; /* Small space if buttons wrap */
+}
+
+.editor-toolbar-divider {
+  width: 1px;
+  height: 20px;
+  background-color: var(--app-border);
+  margin: 0 0.5rem;
+}
+
+
+/* Basic content styling */
+.tiptap-editor p {
+  margin-bottom: 0.5rem;
+}
+.tiptap-editor h1, 
+.tiptap-editor h2, 
+.tiptap-editor h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+.tiptap-editor ul, 
+.tiptap-editor ol {
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+.tiptap-editor blockquote {
+  border-left: 3px solid var(--app-border);
+  margin-left: 0;
+  padding-left: 1rem;
+  color: var(--app-text-muted);
+}
+.tiptap-editor pre {
+  background: #f1f3f5; /* Light background for code blocks */
+  color: var(--app-text);
+  font-family: monospace;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+}
+
+/* Placeholder styles */
+.tiptap-editor p.is-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: var(--app-text-muted);
+  pointer-events: none;
+  height: 0;
+}
+
+/* Ensure the custom form-control styling applies */
+.form-control-custom {
+  background-color: var(--app-input);
+  color: var(--app-text);
+  border: 1px solid var(--app-border);
+  border-radius: var(--app-border-radius) !important; /* Force border-radius */
+  padding: 0.75rem 1rem;
+  transition: var(--app-transition);
+}
+
+.form-control-custom:focus {
+  border-color: var(--app-accent);
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  background-color: var(--app-input);
+  color: var(--app-text);
+}
