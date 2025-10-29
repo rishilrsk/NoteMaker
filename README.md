@@ -1,6 +1,8 @@
 # NoteMaker 📝 - MERN Stack Note-Taking App
 
 A clean, modern, and secure web application for creating, organizing, and accessing your notes from anywhere. Built with the MERN stack (MongoDB, Express, React, Node.js) and deployed using free-tier services.
+---
+
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
@@ -77,4 +79,5 @@ A clean, modern, and secure web application for creating, organizing, and access
 * **Frontend (Netlify):** Deploys from the `client` directory (`Base directory: client`, `Build command: npm run build`, `Publish directory: dist`). Requires a `netlify.toml` or `_redirects` file for routing.
 * **Backend (Render):** Deploys from the `server` directory (`Root Directory: server`, `Build command: npm install`, `Start command: npm start`). Requires `MONGO_URI`, `JWT_SECRET`, and `CLIENT_URL` (set to the live Netlify URL) as environment variables.
 * **Connection:** The `baseURL` in `client/src/services/api.js` must point to the live Render backend URL.
+
 
